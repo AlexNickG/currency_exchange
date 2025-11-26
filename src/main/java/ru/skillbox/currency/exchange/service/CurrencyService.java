@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.skillbox.currency.exchange.dto.CurrencyDto;
+import ru.skillbox.currency.exchange.dto.CurrencyResponseList;
 import ru.skillbox.currency.exchange.entity.Currency;
 import ru.skillbox.currency.exchange.mapper.CurrencyMapper;
 import ru.skillbox.currency.exchange.repository.CurrencyRepository;
@@ -14,6 +15,11 @@ import ru.skillbox.currency.exchange.repository.CurrencyRepository;
 public class CurrencyService {
     private final CurrencyMapper mapper;
     private final CurrencyRepository repository;
+
+    public CurrencyResponseList getAllCurrencies() {
+        log.info("CurrencyService method getAllCurrencies executed");
+        return mapper.currencyListToCurrencyResponseList(repository.findAll());
+    }
 
     public CurrencyDto getById(Long id) {
         log.info("CurrencyService method getById executed");
