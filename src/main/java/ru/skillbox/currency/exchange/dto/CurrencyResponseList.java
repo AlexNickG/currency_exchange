@@ -14,5 +14,5 @@ import java.util.List;
 @AllArgsConstructor
 public class CurrencyResponseList {
 
-    private List<CurrencyShortDto> currencyShortDtoList = new ArrayList<>();
+    private List<CurrencyShortDto> currencies = new ArrayList<>();
 }

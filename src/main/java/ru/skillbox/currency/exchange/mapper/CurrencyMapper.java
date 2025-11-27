@@ -18,10 +18,9 @@ public interface CurrencyMapper {
 
     List<CurrencyShortDto> currencyToCurrencyShortDto(List<Currency> currencyList);
 
-    //@Mapping(target = "currencyShortDtoList", source = "")
     default CurrencyResponseList currencyListToCurrencyResponseList(List<Currency> currencyList) {
         CurrencyResponseList responseList = new CurrencyResponseList();
-        responseList.setCurrencyShortDtoList(currencyToCurrencyShortDto(currencyList));
+        responseList.setCurrencies(currencyToCurrencyShortDto(currencyList));
         return responseList;
     }
 }
