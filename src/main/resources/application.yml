@@ -1,13 +1,11 @@
 server:
   port: 8080
-
 spring:
   liquibase:
     enabled: true
-    drop-first: true
+    drop-first: false
     default-schema: public
     change-log: classpath:db/changelog_init.xml
-
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
@@ -17,9 +15,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL95Dialect
-        show_sql: true
+        show_sql: false
         hbm2ddl:
-          auto: none
-
+          auto: update
 app:
   url: "https://www.cbr.ru/scripts/XML_daily.asp"

@@ -20,6 +20,5 @@ public class BeanUtils {
                 field.set(target, value);
             }
         }
-
     }
 }

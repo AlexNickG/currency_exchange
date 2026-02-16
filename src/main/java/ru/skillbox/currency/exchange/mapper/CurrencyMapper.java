@@ -1,7 +1,6 @@
 package ru.skillbox.currency.exchange.mapper;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import ru.skillbox.currency.exchange.dto.CurrencyDto;
 import ru.skillbox.currency.exchange.dto.CurrencyResponseList;
 import ru.skillbox.currency.exchange.dto.CurrencyShortDto;

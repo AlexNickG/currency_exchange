@@ -3,14 +3,12 @@ package ru.skillbox.currency.exchange.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import ru.skillbox.currency.exchange.util.DecimalAdapter;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-//@Setter
 @Getter
 @Entity
 @NoArgsConstructor

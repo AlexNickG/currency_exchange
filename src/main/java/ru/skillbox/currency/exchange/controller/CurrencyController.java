@@ -7,10 +7,6 @@ import ru.skillbox.currency.exchange.dto.CurrencyDto;
 import ru.skillbox.currency.exchange.dto.CurrencyResponseList;
 import ru.skillbox.currency.exchange.service.CurrencyService;
 
-import javax.xml.bind.JAXBException;
-import java.io.IOException;
-import java.net.MalformedURLException;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/currency")
@@ -33,7 +29,7 @@ public class CurrencyController {
     }
 
     @PostMapping("/create")
-    ResponseEntity<CurrencyDto> create(@RequestBody CurrencyDto dto) throws IOException, JAXBException {
+    ResponseEntity<CurrencyDto> create(@RequestBody CurrencyDto dto) {
         return ResponseEntity.ok(service.create(dto));
     }
 }

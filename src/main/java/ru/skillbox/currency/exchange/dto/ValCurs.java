@@ -1,10 +1,10 @@
-package ru.skillbox.currency.exchange.entity;
+package ru.skillbox.currency.exchange.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import ru.skillbox.currency.exchange.entity.Currency;
 
 import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
